@@ -14,10 +14,10 @@ class written by Infinite Campus, Inc.</description>
   <email>lucor@php.net</email>
   <active>yes</active>
  </lead>
- <date>2008-11-08</date>
- <time>12:48:14</time>
+ <date>2009-01-27</date>
+ <time>14:48:03</time>
  <version>
-  <release>0.9.4</release>
+  <release>0.9.5</release>
   <api>0.9.3</api>
  </version>
  <stability>
@@ -25,8 +25,7 @@ class written by Infinite Campus, Inc.</description>
   <api>beta</api>
  </stability>
  <license uri="http://www.apache.org/licenses/">Apache</license>
- <notes>- fixed installation path in package.xml
-- fixed bug: #14955</notes>
+ <notes>- Changed PEAR dependency to 1.5.4. See http://pear.php.net/advisory-20070507.txt</notes>
  <contents>
   <dir baseinstalldir="Services/Atlassian" name="/">
    <file baseinstalldir="Services/Atlassian" md5sum="a93ac36f2e5196ca5db162f6da3ef140" name="Crowd/Exception.php" role="php" />
@@ -41,7 +40,7 @@ class written by Infinite Campus, Inc.</description>
     <min>5</min>
    </php>
    <pearinstaller>
-    <min>1.4.0</min>
+    <min>1.5.4</min>
    </pearinstaller>
    <extension>
     <name>soap</name>
@@ -120,6 +119,19 @@ class written by Infinite Campus, Inc.</description>
    <license uri="http://www.apache.org/licenses/">Apache</license>
    <notes>- fixed installation path in package.xml
 - fixed bug: #14955</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.5</release>
+    <api>0.9.3</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2009-01-27</date>
+   <license uri="http://www.apache.org/licenses/">Apache</license>
+   <notes>- Changed PEAR dependency to 1.5.4. See http://pear.php.net/advisory-20070507.txt</notes>
   </release>
  </changelog>
 </package>
