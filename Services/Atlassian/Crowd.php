@@ -122,7 +122,7 @@ class Services_Atlassian_Crowd
 
         // Create the Crowd SOAP client
         try {
-            $this->crowd_client = new SoapClient($this->crowd_config['service_url']);
+            $this->crowd_client = @new SoapClient($this->crowd_config['service_url'], array('exceptions' => true));
         } catch (SoapFault $fault) {
             $exception_message = 'Unable to connect to Crowd. Verify the service_url ' . 
                                  'property is defined and Crowd is running.';
