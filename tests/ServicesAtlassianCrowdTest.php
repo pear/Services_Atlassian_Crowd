@@ -28,12 +28,7 @@
  * @link      http://pear.php.net/packages/Services_Atlassian_Crowd
  */
 
-//Remove the comment below if you want test from source
-set_include_path('../../..'.PATH_SEPARATOR.get_include_path());
-
-require_once 'PHPUnit/Framework.php';
-require_once 'Services/Atlassian/Crowd.php';
-require_once 'test_config.php';
+require_once dirname(__FILE__) . '/test_config.php';
 /** 
  * Services_Atlassian_Crowd tests
  * 
@@ -65,7 +60,11 @@ class ServicesAtlassianCrowdTest extends PHPUnit_Framework_TestCase
     
     public function testAll()
     {
-        $this->crowd = new Services_Atlassian_Crowd($this->_options);
+        try {
+            $this->crowd = new Services_Atlassian_Crowd($this->_options);
+        } catch (Services_Atlassian_Crowd_Exception $e) {
+            $this->markTestSkipped($e->getMessage());
+        }
         
         $this->_token_app = $this->crowd->authenticateApplication();
         

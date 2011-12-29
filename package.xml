@@ -28,10 +28,11 @@ class written by Infinite Campus, Inc.</description>
  <notes>- Changed PEAR dependency to 1.5.4. See http://pear.php.net/advisory-20070507.txt</notes>
  <contents>
   <dir baseinstalldir="Services/Atlassian" name="/">
-   <file baseinstalldir="Services/Atlassian" md5sum="a93ac36f2e5196ca5db162f6da3ef140" name="Crowd/Exception.php" role="php" />
+   <file baseinstalldir="Services/Atlassian" md5sum="a93ac36f2e5196ca5db162f6da3ef140" name="Services/Atlassian/Crowd/Exception.php" role="php" />
    <file baseinstalldir="Services/Atlassian" md5sum="d955c888590e1a536cd5b19417f9b46d" name="tests/ServicesAtlassianCrowdTest.php" role="test" />
+   <file baseinstalldir="Services/Atlassian" name="tests/AllTests.php" role="test" />
    <file baseinstalldir="Services/Atlassian" md5sum="4a5e9d0cef13cba99ec6d48711b6e503" name="tests/test_config.php" role="test" />
-   <file baseinstalldir="Services/Atlassian" md5sum="e05ad986512c73ae9162ddab7c1a497a" name="Crowd.php" role="php" />
+   <file baseinstalldir="Services/Atlassian" md5sum="e05ad986512c73ae9162ddab7c1a497a" name="Services/Atlassian/Crowd.php" role="php" />
   </dir>
  </contents>
  <dependencies>

@@ -38,4 +38,14 @@ $crowd_options = array('app_name' => 'test',
                        'user_agent' => '',
                        'remote_address' => '127.0.0.1');
 
-?>
+if ($fp = @fopen('PHPUnit/Autoload.php', 'r', true)) {
+    require_once 'PHPUnit/Autoload.php';
+} elseif ($fp = @fopen('PHPUnit/Framework.php', 'r', true)) {
+    require_once 'PHPUnit/Framework.php';
+    require_once 'PHPUnit/TextUI/TestRunner.php';
+} else {
+    die('skip could not find PHPUnit');
+}
+fclose($fp);
+
+require_once 'Services/Atlassian/Crowd.php';
