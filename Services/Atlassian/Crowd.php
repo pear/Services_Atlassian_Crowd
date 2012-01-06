@@ -120,7 +120,13 @@ class Services_Atlassian_Crowd
 
         $this->crowd_config = $options;
 
-        // Create the Crowd SOAP client
+        /*
+         * Create the Crowd SOAP client.
+         *
+         * If PHP goes fatal here instead of throwing an exception, check if
+         * you have Xdebug installed.  If so, you are likely experiencing
+         * http://bugs.xdebug.org/view.php?id=705  Fun! :/
+         */
         try {
             $this->crowd_client = new SoapClient($this->crowd_config['service_url'], array('exceptions' => true));
         } catch (SoapFault $fault) {
