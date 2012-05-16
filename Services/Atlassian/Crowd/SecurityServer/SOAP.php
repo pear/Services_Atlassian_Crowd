@@ -62,7 +62,16 @@ class Services_Atlassian_Crowd_SecurityServer_SOAP implements Services_Atlassian
 
         if (is_string($wsdl)) {
             try {
-                @$soapClient = new SoapClient($wsdl, $options);
+
+               /*
+                * If PHP goes fatal here instead of throwing an exception, check if
+                * you have Xdebug installed.  If so, you are likely experiencing
+                * http://bugs.xdebug.org/view.php?id=705  Fun! :/
+                */
+	
+                $options['exceptions'] = true;
+                $soapClient = new SoapClient($wsdl, $options);
+
                 $this->soapClient = $soapClient;
             }
             catch(SoapFault $e) {
