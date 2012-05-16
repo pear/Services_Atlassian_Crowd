@@ -31,7 +31,6 @@
 
 //Remove the comment below if you want test from source
 set_include_path('../../..'.PATH_SEPARATOR.get_include_path());
-error_reporting(E_ALL);
 
 
 require_once 'PHPUnit/Framework.php';
