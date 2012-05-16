@@ -32,10 +32,7 @@
 //Remove the comment below if you want test from source
 set_include_path('../../..'.PATH_SEPARATOR.get_include_path());
 
-
-require_once 'PHPUnit/Framework.php';
-require_once 'Services/Atlassian/Crowd.php';
-require_once '_test_config.inc.php';
+require_once dirname(__FILE__) . '/test_config.php';
 
 /** 
  * Services_Atlassian_Crowd tests
@@ -74,7 +71,13 @@ class ServicesAtlassianCrowdTest extends PHPUnit_Framework_TestCase
         	$this->_options['app_name'],
         	$this->_options['app_credential']
     	);
-        $this->crowd = new Services_Atlassian_Crowd($credentials);
+
+        try {
+            $this->crowd = new Services_Atlassian_Crowd($credentials);
+        } catch (Services_Atlassian_Crowd_Exception $e) {
+            $this->markTestSkipped($e->getMessage());
+        }
+
         
         // get an authentication token
         $this->_token_app = $this->crowd->authenticateApplication(
