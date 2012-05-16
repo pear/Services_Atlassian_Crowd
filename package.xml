@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.7.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Services_Atlassian_Crowd</name>
+ <channel>pear.php.net</channel>
+ <summary>Services_Atlassian_Crowd is a package to use Atlassian Crowd from PHP</summary>
+ <description>Crowd is a web-based single sign-on (SSO) tool 
+that simplifies application provisioning and identity management.
+ 
+This package is derived from the PHP Client Library for Atlassian Crowd
+class written by Infinite Campus, Inc.</description>
+ <lead>
+  <name>Luca Corbo</name>
+  <user>lucor</user>
+  <email>lucor@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-01-27</date>
+ <time>14:48:03</time>
+ <version>
+  <release>0.9.5</release>
+  <api>0.9.3</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.apache.org/licenses/">Apache</license>
+ <notes>- Changed PEAR dependency to 1.5.4. See http://pear.php.net/advisory-20070507.txt</notes>
+ <contents>
+  <dir baseinstalldir="Services/Atlassian" name="/">
+   <file baseinstalldir="Services/Atlassian" md5sum="a93ac36f2e5196ca5db162f6da3ef140" name="Services/Atlassian/Crowd/Exception.php" role="php" />
+   <file baseinstalldir="Services/Atlassian" md5sum="d955c888590e1a536cd5b19417f9b46d" name="tests/ServicesAtlassianCrowdTest.php" role="test" />
+   <file baseinstalldir="Services/Atlassian" name="tests/AllTests.php" role="test" />
+   <file baseinstalldir="Services/Atlassian" md5sum="4a5e9d0cef13cba99ec6d48711b6e503" name="tests/test_config.php" role="test" />
+   <file baseinstalldir="Services/Atlassian" md5sum="e05ad986512c73ae9162ddab7c1a497a" name="Services/Atlassian/Crowd.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5</min>
+   </php>
+   <pearinstaller>
+    <min>1.5.4</min>
+   </pearinstaller>
+   <extension>
+    <name>soap</name>
+   </extension>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.9.0</release>
+    <api>0.9.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2008-07-08</date>
+   <license uri="http://www.apache.org/licenses/">Apache</license>
+   <notes>Initial release for proposal</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.1</release>
+    <api>0.9.1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2008-07-10</date>
+   <license uri="http://www.apache.org/licenses/">Apache</license>
+   <notes>- the class variables are now protected
+- a common method is now used to avoid some repeated parts of the code
+- the package was renamed to Services_Atlassian_Crowd</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.2</release>
+    <api>0.9.2</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2008-07-30</date>
+   <license uri="http://www.apache.org/licenses/">Apache</license>
+   <notes>- the magic method __call is now used to avoid some repeated parts of the code</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.3</release>
+    <api>0.9.3</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2008-11-08</date>
+   <license uri="http://www.apache.org/licenses/">Apache</license>
+   <notes>- Document __call() with @method
+- Check the options passed to the constructor
+- Removed the @access tags not necessary in PHP5
+- Added comment blocks for the protected variables</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.4</release>
+    <api>0.9.3</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2008-11-08</date>
+   <license uri="http://www.apache.org/licenses/">Apache</license>
+   <notes>- fixed installation path in package.xml
+- fixed bug: #14955</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9.5</release>
+    <api>0.9.3</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2009-01-27</date>
+   <license uri="http://www.apache.org/licenses/">Apache</license>
+   <notes>- Changed PEAR dependency to 1.5.4. See http://pear.php.net/advisory-20070507.txt</notes>
+  </release>
+ </changelog>
+</package>
