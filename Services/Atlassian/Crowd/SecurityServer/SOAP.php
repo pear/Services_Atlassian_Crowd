@@ -2399,7 +2399,7 @@ class Services_Atlassian_Crowd_SecurityServer_SOAP implements Services_Atlassian
         $params = array(
             $this->_getToken(),
             $principal,
-            $credential,
+            array('credential' => $credential),
         );
         $params = call_user_func_array(array('self', '_soapEncode'), $params);
         
