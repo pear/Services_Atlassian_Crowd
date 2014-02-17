@@ -1,0 +1,31 @@
+{
+    "authors": [
+        {
+            "email": "lucor@php.net",
+            "name": "Luca Corbo",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Services_Atlassian_Crowd": "./"
+        }
+    },
+    "description": "More info available on: http://pear.php.net/package/Services_Atlassian_Crowd",
+    "include-path": [
+        "./"
+    ],
+    "license": "Apache",
+    "name": "pear/services_atlassian_crowd",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Services_Atlassian_Crowd",
+        "source": "https://github.com/pear/Services_Atlassian_Crowd"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
